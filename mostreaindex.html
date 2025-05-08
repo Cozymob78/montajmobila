@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montaj Mobilă Cluj-Napoca | Valisimo.ro - Servicii Profesionale</title>
+    <meta name="description" content="Valisimo oferă servicii profesionale de montaj mobilă în Cluj-Napoca. Asamblare rapidă și eficientă pentru orice tip de mobilier. Contactează-ne pentru o ofertă personalizată!">
+    <meta name="keywords" content="montaj mobila Cluj, montare mobila Cluj Napoca, asamblare mobila Cluj, servicii montaj mobila Cluj, montaj mobilier profesionist Cluj, montaj mobilier la domiciliu Cluj, valisimo montaj mobila cluj">
+    <link rel="canonical" href="https://valisimo.ro/">
+    <link rel="icon" href="imagini/favicon-valisimo.ro.png">
+    
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo" >
+                <a href="https://valisimo.ro">Valisimo.ro</a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="https://valisimo.ro">Acasă</a></li>
+                    <li class="dropdown">
+                        <a href="https://valisimo.ro/servicii">Servicii</a>
+                        <ul class="dropdown-content">
+                            <li><a href="index.html">Montaj Mobilă</a></li>
+                            <li><a href="reparatii.html">Reparații Mobilă</a></li>
+                            <li><a href="retapitare.html">Reparații Mobilă</a></li>
+                            <li><a href="paturi.html">Mobilă la Comandă</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://valisimo.ro/portofoliu">Portofoliu</a></li>
+                    <li><a href="https://valisimo.ro/contact">Contact</a></li>
+                    <li class="call-button"><a href="tel:+40755873335">Sună-ne</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-nav-toggle">
+                <button aria-label="Meniu">☰</button>
+            </div>
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="https://valisimo.ro">Acasă</a></li>
+                    <li class="dropdown">
+                        <a href="https://valisimo.ro/servicii">Servicii</a>
+                        <button class="dropdown-toggle" aria-expanded="false" aria-controls="dropdown-menu-servicii">+</button>
+                        <ul class="dropdown-content" id="dropdown-menu-servicii">
+                            <li><a href="index.html">Montaj Mobilă</a></li>
+                            <li><a href="reparatii">Reparații Mobilă</a></li>
+                            <li><a href="retapitare.html">Retapitare mobila</a></li>
+                            <li><a href="https://valisimo.ro/mobila-la-comanda">Paturi tapitate</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://valisimo.ro/portofoliu">Portofoliu</a></li>
+                    <li><a href="https://valisimo.ro/contact">Contact</a></li>
+                    <li class="call-button"><a href="tel:+40755873335">Sună-ne</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container main-content contact-page">
+        <h1>Contactează Valisimo.ro</h1>
+        <p class="contact-intro">Suntem aici pentru a te ajuta cu orice întrebare sau solicitare legată de serviciile noastre de montaj mobilă în Cluj-Napoca. Alege metoda de contact care ți se potrivește cel mai bine:</p>
+
+        <div class="contact-methods">
+            <div class="contact-method">
+                <i class="fas fa-envelope"></i>
+                <h3>Trimite-ne un Email</h3>
+                <p>Pentru întrebări detaliate sau solicitări de ofertă, te rugăm să ne scrii la:</p>
+                <p><a href="mailto:contact@valisimo.ro">contact@valisimo.ro</a></p>
+            </div>
+
+            <div class="contact-method">
+                <i class="fab fa-whatsapp"></i>
+                <h3>Contactează-ne pe WhatsApp</h3>
+                <p>Pentru o comunicare rapidă și directă, ne poți contacta pe WhatsApp la numărul:</p>
+                <p><a href="https://wa.me/40755873335" target="_blank">+40755873335</a></p>
+            </div>
+
+            <div class="contact-method">
+                <i class="fas fa-phone"></i>
+                <h3>Sună-ne</h3>
+                <p>Pentru o discuție directă cu unul dintre experții noștri, te rugăm să ne suni la:</p>
+                <p><a href="tel:+40755873335">+40755873335</a></p>
+                <p>Program: Luni - Vineri, 7:00 - 21:00</p>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Valisimo.ro. Toate drepturile rezervate.</p>
+            <p><a href="https://valisimo.ro/politica-de-confidentialitate">Politica de Confidențialitate</a> | <a href="https://valisimo.ro/termeni-si-conditii">Termeni și Condiții</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileNavToggle = document.querySelector('.mobile-nav-toggle button');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const mobileDropdownToggles = document.querySelectorAll('.mobile-nav .dropdown-toggle');
+
+            mobileNavToggle.addEventListener('click', function() {
+                mobileNav.classList.toggle('open');
+            });
+
+            mobileDropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function() {
+                    const dropdown = this.parentNode;
+                    dropdown.classList.toggle('open');
+                    this.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+                });
+            });
+
+            // Desktop dropdown functionality (optional, can be done with CSS only)
+            const desktopDropdowns = document.querySelectorAll('.desktop-nav .dropdown');
+            desktopDropdowns.forEach(dropdown => {
+                dropdown.addEventListener('mouseenter', function() {
+                    this.querySelector('.dropdown-content').style.display = 'block';
+                });
+                dropdown.addEventListener('mouseleave', function() {
+                    this.querySelector('.dropdown-content').style.display = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

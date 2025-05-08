@@ -1,0 +1,572 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: none; /* Ascuns initial pe ecran mic */
+}
+
+.desktop-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.desktop-nav ul li {
+    margin-left: 20px;
+}
+
+.desktop-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.desktop-nav ul li a:hover {
+    color: #007bff;
+}
+
+.desktop-nav .call-button a {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.desktop-nav .call-button a:hover {
+    background-color: #0056b3;
+}
+
+.desktop-nav .dropdown {
+    position: relative;
+}
+
+.desktop-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 10px 0;
+    min-width: 180px;
+    text-align: left;
+}
+
+.desktop-nav .dropdown-content li {
+    margin: 0;
+}
+
+.desktop-nav .dropdown-content li a {
+    padding: 8px 15px;
+    display: block;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: left;
+}
+
+.mobile-nav.open {
+    display: block;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav ul li {
+    margin-bottom: 10px;
+}
+
+.mobile-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-nav ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+.mobile-nav .call-button a {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.mobile-nav .call-button a:hover {
+    background-color: #0056b3;
+}
+
+.mobile-nav .dropdown > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav .dropdown-toggle {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.mobile-nav .dropdown-content {
+    display: none;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.mobile-nav .dropdown.open > .dropdown-content {
+    display: block;
+}
+
+/* Main Content - Contact Page */
+.contact-page {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-page h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-intro {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.contact-method {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.contact-method i {
+    font-size: 2em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.contact-method h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-method p {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.contact-method a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-method a:hover {
+    color: #0056b3;
+}
+
+.contact-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form h2 {
+    color: #333;
+    text-align: left;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.contact-form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* style.css */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: none; /* Ascuns initial pe ecran mic */
+}
+
+.desktop-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.desktop-nav ul li {
+    margin-left: 20px;
+}
+
+.desktop-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.desktop-nav ul li a:hover {
+    color: #007bff;
+}
+
+.desktop-nav .call-button a {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.desktop-nav .call-button a:hover {
+    background-color: #0056b3;
+}
+
+.desktop-nav .dropdown {
+    position: relative;
+}
+
+.desktop-nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    padding: 10px 0;
+    min-width: 180px;
+    text-align: left;
+}
+
+.desktop-nav .dropdown-content li {
+    margin: 0;
+}
+
+.desktop-nav .dropdown-content li a {
+    padding: 8px 15px;
+    display: block;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #333;
+}
+
+.mobile-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: left;
+}
+
+.mobile-nav.open {
+    display: block;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav ul li {
+    margin-bottom: 10px;
+}
+
+.mobile-nav ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-nav ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+.mobile-nav .call-button a {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.mobile-nav .call-button a:hover {
+    background-color: #0056b3;
+}
+
+.mobile-nav .dropdown > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-nav .dropdown-toggle {
+    background: none;
+    border: none;
+    color: #333;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.mobile-nav .dropdown-content {
+    display: none;
+    padding-left: 15px;
+    margin-top: 5px;
+}
+
+.mobile-nav .dropdown.open > .dropdown-content {
+    display: block;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-area {
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #777;
+}
+
+.content-section {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.content-section h2 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.content-section ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.image-gallery {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.image-gallery img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image-note {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+}
+
+.contact-cta {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-cta h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.contact-cta a 
